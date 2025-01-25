@@ -1,0 +1,29 @@
+﻿@model List<MobileShop.Models.Entities.Product>
+@{
+    Layout = "_AdminLayout";
+}
+
+<h1>All Product List</h1>
+<div class="bg-transparent">
+    <table class="table">
+        <thead>
+            <tr>
+                <td>Name</td>
+                <td>Description</td>
+                <td>Categories</td>
+                <td>Price</td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var product in Model)
+            {
+                <tr>
+                    <td>@product.Name</td>
+                    <td>@product.Description</td>
+                    <td>@product.Categories</td>
+                    <td>@product.Price</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
